@@ -1,0 +1,146 @@
+[
+ {
+  "id": "P1",
+  "lang": "English",
+  "script": "Latin",
+  "shop": "Saree shop",
+  "occasion": "Diwali",
+  "lines": [
+   "Diwali Sale",
+   "Flat 50% off on all sarees",
+   "Lakshmi Saree Centre"
+  ],
+  "imgs": [
+   "P1_0fdef6",
+   "P1_abf818",
+   "P1_db1dee",
+   "P1_f1e0d2"
+  ]
+ },
+ {
+  "id": "P2",
+  "lang": "Hindi",
+  "script": "Devanagari",
+  "shop": "Saree shop",
+  "occasion": "Diwali",
+  "lines": [
+   "दिवाली सेल",
+   "सभी साड़ियों पर 50% छूट",
+   "लक्ष्मी साड़ी सेंटर"
+  ],
+  "imgs": [
+   "P2_276b88",
+   "P2_6acb9b",
+   "P2_8ae06f",
+   "P2_e42a5d"
+  ]
+ },
+ {
+  "id": "P3",
+  "lang": "Telugu",
+  "script": "Telugu",
+  "shop": "Saree shop",
+  "occasion": "Diwali",
+  "lines": [
+   "దీపావళి సేల్",
+   "అన్ని చీరలపై 50% తగ్గింపు",
+   "లక్ష్మి శారీ సెంటర్"
+  ],
+  "imgs": [
+   "P3_31aea3",
+   "P3_557b2b",
+   "P3_6e606e",
+   "P3_bd1dac"
+  ]
+ },
+ {
+  "id": "P4",
+  "lang": "Hindi",
+  "script": "Devanagari",
+  "shop": "Sweet shop",
+  "occasion": "Diwali",
+  "lines": [
+   "दिवाली स्पेशल मिठाई",
+   "1 किलो डिब्बा सिर्फ ₹499",
+   "गुप्ता स्वीट्स"
+  ],
+  "imgs": [
+   "P4_2879c1",
+   "P4_57340a",
+   "P4_872188",
+   "P4_a33fb1"
+  ]
+ },
+ {
+  "id": "P5",
+  "lang": "Tamil",
+  "script": "Tamil",
+  "shop": "Sweet shop",
+  "occasion": "Diwali",
+  "lines": [
+   "தீபாவளி சிறப்பு இனிப்புகள்",
+   "1 கிலோ பெட்டி ₹499 மட்டும்",
+   "முருகன் ஸ்வீட்ஸ்"
+  ],
+  "imgs": [
+   "P5_0090c5",
+   "P5_0282ac",
+   "P5_24a10f",
+   "P5_c80848"
+  ]
+ },
+ {
+  "id": "P6",
+  "lang": "Bengali",
+  "script": "Bengali",
+  "shop": "Grocery (kirana) store",
+  "occasion": "Durga Puja",
+  "lines": [
+   "পুজোর অফার",
+   "সব মুদি সামগ্রীতে 20% ছাড়",
+   "মা তারা স্টোর্স"
+  ],
+  "imgs": [
+   "P6_38a6cf",
+   "P6_58c9b8",
+   "P6_9dd078",
+   "P6_df33f0"
+  ]
+ },
+ {
+  "id": "P7",
+  "lang": "Hindi",
+  "script": "Devanagari",
+  "shop": "Mobile accessories shop",
+  "occasion": "Festive offer",
+  "lines": [
+   "धमाका ऑफर",
+   "हर चार्जर सिर्फ ₹299",
+   "राज मोबाइल्स"
+  ],
+  "imgs": [
+   "P7_4237fc",
+   "P7_49bd27",
+   "P7_e64036",
+   "P7_fba49e"
+  ]
+ },
+ {
+  "id": "P8",
+  "lang": "Telugu",
+  "script": "Telugu",
+  "shop": "Tailoring shop",
+  "occasion": "Dasara",
+  "lines": [
+   "దసరా ఆఫర్",
+   "బ్లౌజ్ కుట్టు కేవలం ₹199",
+   "శ్రీ లక్ష్మి టైలర్స్"
+  ],
+  "imgs": [
+   "P8_01775f",
+   "P8_69736a",
+   "P8_73cba7",
+   "P8_d11ee5"
+  ]
+ }
+]

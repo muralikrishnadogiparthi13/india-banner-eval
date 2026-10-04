@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<!-- v5 -->
+<title>Would you post this banner? | India shop banner eval</title>
+<style>
+  :root { --ink:#1d1b18; --muted:#6b665e; --line:#e4dfd6; --bg:#faf7f2; --card:#fff; --accent:#b4441f; --ok:#2f7a3d; --warn:#b07b10; --bad:#a3291f; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui, -apple-system, "Segoe UI", "Noto Sans", "Noto Sans Devanagari", "Noto Sans Telugu", "Noto Sans Tamil", "Noto Sans Bengali", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 80px; }
+  h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+  h2 { font-size: 1.15rem; margin: 0 0 6px; }
+  p { margin: 6px 0; }
+  .muted { color: var(--muted); font-size: .92rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 14px 0; }
+  label.row { display:block; margin: 10px 0 4px; font-weight: 600; }
+  input[type=text], input[type=email], input[type=number] { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:8px; font:inherit; background:#fff; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .chip { border:1px solid var(--line); border-radius:999px; padding:6px 12px; background:#fff; cursor:pointer; user-select:none; }
+  .chip input { margin-right:6px; }
+  .consent { display:flex; gap:10px; align-items:flex-start; }
+  button.primary { background: var(--accent); color:#fff; border:0; border-radius:10px; padding:12px 18px; font:inherit; font-weight:600; cursor:pointer; }
+  button.primary:disabled { opacity:.45; cursor:not-allowed; }
+  button.ghost { background:none; border:1px solid var(--line); border-radius:10px; padding:12px 18px; font:inherit; cursor:pointer; }
+  .brief { background:#fff8ef; border:1px dashed #e2c9a8; border-radius:10px; padding:10px 12px; margin:8px 0 12px; }
+  .brief .t { font-size:1.15rem; font-weight:600; }
+  .grid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; }
+  @media (max-width:520px) { .grid { grid-template-columns: 1fr; } }
+  .opt { border:2px solid var(--line); border-radius:12px; padding:8px; background:#fff; }
+  .opt.picked { border-color: var(--accent); box-shadow: 0 0 0 3px #b4441f22; }
+  .opt img { width:100%; aspect-ratio:1/1; object-fit:contain; border-radius:8px; background:#eee; display:block; cursor:zoom-in; }
+  .opt .lab { font-weight:700; margin:6px 0 4px; display:flex; justify-content:space-between; align-items:center; }
+  .q { font-size:.9rem; margin:8px 0 2px; color:var(--muted); }
+  .seg { display:flex; flex-wrap:wrap; gap:6px; }
+  .seg label { flex:1 1 auto; text-align:center; border:1px solid var(--line); border-radius:8px; padding:6px 6px; font-size:.86rem; cursor:pointer; background:#fff; }
+  .seg input { display:none; }
+  .seg input:checked + span { font-weight:700; }
+  .seg label:has(input:checked) { background:#1d1b18; color:#fff; border-color:#1d1b18; }
+  .pickbtn { width:100%; margin-top:8px; padding:8px; border-radius:8px; border:1px solid var(--accent); background:#fff; color:var(--accent); font:inherit; font-weight:600; cursor:pointer; }
+  .opt.picked .pickbtn { background: var(--accent); color:#fff; }
+  .progress { height:6px; background:var(--line); border-radius:6px; overflow:hidden; margin:6px 0 14px; }
+  .progress > div { height:100%; background:var(--accent); width:0; transition: width .3s; }
+  .nav { display:flex; justify-content:space-between; gap:10px; margin-top:16px; }
+  #zoom { position:fixed; inset:0; background:#000d; display:none; align-items:center; justify-content:center; z-index:10; padding:12px; }
+  #zoom img { max-width:100%; max-height:100%; }
+  .err { color: var(--bad); font-size:.9rem; min-height:1.2em; }
+</style>
+</head>
+<body>
+<main>
+  <section id="intro">
+    <h1>Would you post this banner for a shop?</h1>
+    <p>A small shop owner asked an AI tool for a festive sale banner for WhatsApp status, with the offer written in their language. You'll see a few such requests, each with 4 banners made by different AI models (names hidden, order shuffled).</p>
+    <p>For each banner you'll answer two quick things: is the text written correctly, and would you post it as-is. Then pick the one you'd actually post. Takes about 2 minutes per request.</p>
+    <div class="card">
+      <label class="row" for="name">Your name</label>
+      <input id="name" type="text" autocomplete="name">
+      <label class="row" for="email">Email</label>
+      <input id="email" type="email" autocomplete="email">
+      <label class="row" for="age">Age</label>
+      <input id="age" type="number" min="18" max="100" inputmode="numeric">
+      <label class="row">Which of these can you read comfortably?</label>
+      <div class="chips" id="langs"></div>
+      <p class="muted">You'll only see banners in the languages you tick, so tick only the ones you can actually read.</p>
+      <label class="row">Consent</label>
+      <div class="consent">
+        <input id="consent" type="checkbox">
+        <label for="consent">I confirm that I am 18 years or older. I voluntarily participated in this evaluation. I consent to my name, email, and responses/ratings being included in this submission.</label>
+      </div>
+      <p class="err" id="introErr"></p>
+      <button class="primary" id="start">Start</button>
+    </div>
+  </section>
+
+  <section id="task" hidden>
+    <div class="muted" id="stepLabel"></div>
+    <div class="progress"><div id="bar"></div></div>
+    <div class="card">
+      <h2 id="title"></h2>
+      <div class="brief">
+        <div class="muted">The banner should say exactly:</div>
+        <div class="t" id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="err" id="taskErr"></p>
+      <div class="nav">
+        <button class="ghost" id="back">Back</button>
+        <button class="primary" id="next">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="done" hidden>
+    <h1>Thank you!</h1>
+    <p id="doneMsg">Your answers have been recorded.</p>
+    <p class="muted">You can close this page now.</p>
+  </section>
+</main>
+<div id="zoom"><img alt="Banner, full size"></div>
+
+<script>
+const FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfYHsZKiaEpQXIRfBgOerhXK0kEsrWskEBzDQ0nw1trVcM-bw/formResponse';
+const F = { name:'entry.740197396', email:'entry.1307053540', age:'entry.943482930', consent:'entry.572389901', langs:'entry.1201553290', data:'entry.2109316524' };
+const LANGS = ['English','Hindi','Telugu','Tamil','Bengali'];
+const TEXT_OPTS = [['c','All correct'],['s','Small mistake'],['w','Wrong / made-up letters'],['n','Can’t read this']];
+const USE_OPTS = [['y','Yes'],['m','With small edits'],['x','No']];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const $ = id => document.getElementById(id);
+
+let briefs = [], order = [], step = 0, langsRead = [];
+const answers = {}; // promptId -> {shown:[ids], pick:id, img:{id:{t,u}}}
+const started = new Date().toISOString();
+
+LANGS.forEach(l => { const lab = document.createElement('label'); lab.className = 'chip'; lab.innerHTML = `<input type="checkbox" value="${l}">${l}`; $('langs').appendChild(lab); });
+
+fetch('briefs.json?v=' + Date.now(), { cache: 'no-store' }).then(r => r.json()).then(b => { briefs = b; order = shuffle(b.map(x => x.id)); });
+
+$('start').onclick = () => {
+  const name = $('name').value.trim(), email = $('email').value.trim(), age = parseInt($('age').value, 10);
+  langsRead = [...document.querySelectorAll('#langs input:checked')].map(i => i.value);
+  const err = !name ? 'Please enter your name.' : !/^\S+@\S+\.\S+$/.test(email) ? 'Please enter a valid email.' :
+    !(age >= 18) ? 'This evaluation is for people aged 18 or older.' : !langsRead.length ? 'Tick at least one language you can read.' :
+    !$('consent').checked ? 'Please tick the consent box to continue.' : !briefs.length ? 'Still loading, try again in a second.' : '';
+  $('introErr').textContent = err;
+  if (err) return;
+  order = order.filter(id => langsRead.includes(briefs.find(x => x.id === id).lang));
+  $('intro').hidden = true; $('task').hidden = false; render();
+};
+
+function render() {
+  const b = briefs.find(x => x.id === order[step]);
+  const a = answers[b.id] || (answers[b.id] = { shown: shuffle(b.imgs), pick: null, img: {} });
+  const canRead = langsRead.includes(b.lang);
+  $('stepLabel').textContent = `Request ${step + 1} of ${order.length} \u00b7 only ${langsRead.join(' & ')} banners`;
+  $('bar').style.width = `${(step / order.length) * 100}%`;
+  $('title').textContent = `${b.shop}, ${b.occasion}, in ${b.lang}`;
+  [1,2,3].forEach(i => $('line' + i).textContent = b.lines[i - 1]);
+  $('taskErr').textContent = '';
+  $('back').style.visibility = step ? 'visible' : 'hidden';
+  $('next').textContent = step === order.length - 1 ? 'Submit' : 'Next';
+  const g = $('grid'); g.innerHTML = '';
+  a.shown.forEach((id, k) => {
+    const L = 'ABCD'[k];
+    if (!a.img[id]) a.img[id] = { t: canRead ? null : 'n', u: null };
+    const d = document.createElement('div'); d.className = 'opt' + (a.pick === id ? ' picked' : '');
+    const seg = (name, opts, val) => `<div class="seg">${opts.map(([v, t]) => `<label><input type="radio" name="${name}" value="${v}" ${val === v ? 'checked' : ''}><span>${t}</span></label>`).join('')}</div>`;
+    d.innerHTML = `<div class="lab"><span>Banner ${L}</span></div>
+      <img src="img/${id}.jpg" alt="Banner ${L}" loading="lazy">
+      ${canRead ? `<div class="q">Is the text written correctly?</div>${seg('t_' + id, TEXT_OPTS.slice(0, 3), a.img[id].t)}` : `<div class="q">Text check skipped (you don’t read ${b.lang})</div>`}
+      <div class="q">Could the shop post this as-is?</div>${seg('u_' + id, USE_OPTS, a.img[id].u)}
+      <button class="pickbtn">${a.pick === id ? '✓ My pick' : 'I’d post this one'}</button>`;
+    d.querySelector('img').onclick = () => { $('zoom').querySelector('img').src = `img/${id}.jpg`; $('zoom').style.display = 'flex'; };
+    d.querySelectorAll(`input[name="t_${id}"]`).forEach(r => r.onchange = () => a.img[id].t = r.value);
+    d.querySelectorAll(`input[name="u_${id}"]`).forEach(r => r.onchange = () => a.img[id].u = r.value);
+    d.querySelector('.pickbtn').onclick = () => { a.pick = id; render(); };
+    g.appendChild(d);
+  });
+  window.scrollTo({ top: 0 });
+}
+
+$('zoom').onclick = () => $('zoom').style.display = 'none';
+$('back').onclick = () => { if (step) { step--; render(); } };
+$('next').onclick = () => {
+  const a = answers[order[step]];
+  const missing = a.shown.some(id => !a.img[id].t || !a.img[id].u) ? 'Please answer both questions for all 4 banners.' : !a.pick ? 'Please pick the one you’d post.' : '';
+  $('taskErr').textContent = missing;
+  if (missing) return;
+  if (step < order.length - 1) { step++; render(); } else submit();
+};
+
+function submit() {
+  $('next').disabled = true; $('next').textContent = 'Sending…';
+  const payload = { v: 1, started, finished: new Date().toISOString(), langs: langsRead, order, answers, ua: navigator.userAgent.slice(0, 120) };
+  const body = new URLSearchParams();
+  body.set(F.name, $('name').value.trim()); body.set(F.email, $('email').value.trim()); body.set(F.age, $('age').value);
+  body.set(F.consent, 'Yes: ' + document.querySelector('label[for=consent]').textContent.trim());
+  body.set(F.langs, langsRead.join(', ')); body.set(F.data, JSON.stringify(payload));
+  fetch(FORM, { method: 'POST', mode: 'no-cors', body }).then(() => {
+    $('task').hidden = true; $('done').hidden = false;
+  }).catch(() => {
+    $('next').disabled = false; $('next').textContent = 'Submit';
+    $('taskErr').textContent = 'Could not send. Check your connection and tap Submit again.';
+  });
+}
+</script>
+</body>
+</html>
