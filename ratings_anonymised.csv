@@ -2,84 +2,84 @@ rater,brief,language,banner_code,model,text_correct,post_as_is,picked
 R1,P4,Hindi,P4_a33fb1,Gemini 2.5 Flash Image,Small mistake,With small edits,0
 R1,P4,Hindi,P4_2879c1,Gemini 3.1 Flash Image,All correct,Yes,1
 R1,P4,Hindi,P4_57340a,GPT Image 1,Small mistake,No,0
-R1,P4,Hindi,P4_872188,Ideogram 3.0,Wrong / made-up letters,No,0
+R1,P4,Hindi,P4_872188,Ideogram 3.x,Wrong / made-up letters,No,0
 R1,P7,Hindi,P7_49bd27,Gemini 2.5 Flash Image,Small mistake,With small edits,0
 R1,P7,Hindi,P7_e64036,GPT Image 1,Small mistake,With small edits,0
-R1,P7,Hindi,P7_fba49e,Ideogram 3.0,Wrong / made-up letters,No,0
+R1,P7,Hindi,P7_fba49e,Ideogram 3.x,Wrong / made-up letters,No,0
 R1,P7,Hindi,P7_4237fc,Gemini 3.1 Flash Image,All correct,Yes,1
 R1,P2,Hindi,P2_6acb9b,Gemini 2.5 Flash Image,Small mistake,No,0
 R1,P2,Hindi,P2_8ae06f,Gemini 3.1 Flash Image,All correct,Yes,1
-R1,P2,Hindi,P2_276b88,Ideogram 3.0,Small mistake,No,0
+R1,P2,Hindi,P2_276b88,Ideogram 3.x,Small mistake,No,0
 R1,P2,Hindi,P2_e42a5d,GPT Image 1,Small mistake,No,0
 R1,P1,English,P1_abf818,Gemini 3.1 Flash Image,All correct,Yes,1
-R1,P1,English,P1_db1dee,Ideogram 3.0,All correct,With small edits,0
+R1,P1,English,P1_db1dee,Ideogram 3.x,All correct,With small edits,0
 R1,P1,English,P1_f1e0d2,GPT Image 1,All correct,Yes,0
 R1,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,Small mistake,With small edits,0
 R2,P1,English,P1_abf818,Gemini 3.1 Flash Image,All correct,Yes,0
-R2,P1,English,P1_db1dee,Ideogram 3.0,All correct,Yes,1
+R2,P1,English,P1_db1dee,Ideogram 3.x,All correct,Yes,1
 R2,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,Small mistake,No,0
 R2,P1,English,P1_f1e0d2,GPT Image 1,All correct,Yes,0
 R3,P1,English,P1_f1e0d2,GPT Image 1,Wrong / made-up letters,With small edits,0
 R3,P1,English,P1_abf818,Gemini 3.1 Flash Image,Small mistake,With small edits,1
 R3,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,All correct,No,0
-R3,P1,English,P1_db1dee,Ideogram 3.0,All correct,No,0
-R4,P4,Hindi,P4_872188,Ideogram 3.0,Wrong / made-up letters,No,0
+R3,P1,English,P1_db1dee,Ideogram 3.x,All correct,No,0
+R4,P4,Hindi,P4_872188,Ideogram 3.x,Wrong / made-up letters,No,0
 R4,P4,Hindi,P4_57340a,GPT Image 1,Small mistake,No,0
 R4,P4,Hindi,P4_2879c1,Gemini 3.1 Flash Image,All correct,Yes,1
 R4,P4,Hindi,P4_a33fb1,Gemini 2.5 Flash Image,Small mistake,No,0
 R4,P8,Telugu,P8_69736a,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R4,P8,Telugu,P8_01775f,GPT Image 1,Small mistake,No,0
-R4,P8,Telugu,P8_73cba7,Ideogram 3.0,Wrong / made-up letters,No,0
+R4,P8,Telugu,P8_73cba7,Ideogram 3.x,Wrong / made-up letters,No,0
 R4,P8,Telugu,P8_d11ee5,Gemini 3.1 Flash Image,All correct,Yes,1
 R4,P7,Hindi,P7_49bd27,Gemini 2.5 Flash Image,Small mistake,No,0
-R4,P7,Hindi,P7_fba49e,Ideogram 3.0,Small mistake,No,0
+R4,P7,Hindi,P7_fba49e,Ideogram 3.x,Small mistake,No,0
 R4,P7,Hindi,P7_e64036,GPT Image 1,Small mistake,No,0
 R4,P7,Hindi,P7_4237fc,Gemini 3.1 Flash Image,All correct,Yes,1
 R4,P3,Telugu,P3_557b2b,GPT Image 1,Wrong / made-up letters,No,0
-R4,P3,Telugu,P3_31aea3,Ideogram 3.0,Small mistake,No,0
+R4,P3,Telugu,P3_31aea3,Ideogram 3.x,Small mistake,No,0
 R4,P3,Telugu,P3_bd1dac,Gemini 3.1 Flash Image,All correct,Yes,1
 R4,P3,Telugu,P3_6e606e,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R4,P2,Hindi,P2_8ae06f,Gemini 3.1 Flash Image,All correct,Yes,1
 R4,P2,Hindi,P2_e42a5d,GPT Image 1,Small mistake,No,0
 R4,P2,Hindi,P2_6acb9b,Gemini 2.5 Flash Image,Small mistake,No,0
-R4,P2,Hindi,P2_276b88,Ideogram 3.0,Small mistake,No,0
+R4,P2,Hindi,P2_276b88,Ideogram 3.x,Small mistake,No,0
 R4,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,Small mistake,No,0
-R4,P1,English,P1_db1dee,Ideogram 3.0,All correct,Yes,1
+R4,P1,English,P1_db1dee,Ideogram 3.x,All correct,Yes,1
 R4,P1,English,P1_f1e0d2,GPT Image 1,All correct,Yes,0
 R4,P1,English,P1_abf818,Gemini 3.1 Flash Image,All correct,Yes,0
 R5,P5,Tamil,P5_24a10f,Gemini 3.1 Flash Image,All correct,Yes,1
-R5,P5,Tamil,P5_0282ac,Ideogram 3.0,Wrong / made-up letters,No,0
+R5,P5,Tamil,P5_0282ac,Ideogram 3.x,Wrong / made-up letters,No,0
 R5,P5,Tamil,P5_0090c5,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R5,P5,Tamil,P5_c80848,GPT Image 1,Wrong / made-up letters,No,0
 R5,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,Small mistake,No,0
 R5,P1,English,P1_f1e0d2,GPT Image 1,All correct,Yes,0
 R5,P1,English,P1_abf818,Gemini 3.1 Flash Image,All correct,With small edits,0
-R5,P1,English,P1_db1dee,Ideogram 3.0,All correct,With small edits,1
-R6,P6,Bengali,P6_58c9b8,Ideogram 3.0,Wrong / made-up letters,No,0
+R5,P1,English,P1_db1dee,Ideogram 3.x,All correct,With small edits,1
+R6,P6,Bengali,P6_58c9b8,Ideogram 3.x,Wrong / made-up letters,No,0
 R6,P6,Bengali,P6_38a6cf,Gemini 3.1 Flash Image,All correct,Yes,1
 R6,P6,Bengali,P6_9dd078,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R6,P6,Bengali,P6_df33f0,GPT Image 1,Small mistake,With small edits,0
 R7,P3,Telugu,P3_6e606e,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R7,P3,Telugu,P3_557b2b,GPT Image 1,Wrong / made-up letters,No,0
-R7,P3,Telugu,P3_31aea3,Ideogram 3.0,Wrong / made-up letters,No,0
+R7,P3,Telugu,P3_31aea3,Ideogram 3.x,Wrong / made-up letters,No,0
 R7,P3,Telugu,P3_bd1dac,Gemini 3.1 Flash Image,All correct,With small edits,1
 R7,P8,Telugu,P8_01775f,GPT Image 1,Wrong / made-up letters,No,0
-R7,P8,Telugu,P8_73cba7,Ideogram 3.0,Wrong / made-up letters,No,0
+R7,P8,Telugu,P8_73cba7,Ideogram 3.x,Wrong / made-up letters,No,0
 R7,P8,Telugu,P8_69736a,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R7,P8,Telugu,P8_d11ee5,Gemini 3.1 Flash Image,All correct,With small edits,1
 R7,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,Small mistake,With small edits,0
 R7,P1,English,P1_f1e0d2,GPT Image 1,All correct,With small edits,0
 R7,P1,English,P1_abf818,Gemini 3.1 Flash Image,All correct,Yes,1
-R7,P1,English,P1_db1dee,Ideogram 3.0,All correct,With small edits,0
+R7,P1,English,P1_db1dee,Ideogram 3.x,All correct,With small edits,0
 R8,P1,English,P1_abf818,Gemini 3.1 Flash Image,All correct,Yes,0
-R8,P1,English,P1_db1dee,Ideogram 3.0,All correct,With small edits,0
+R8,P1,English,P1_db1dee,Ideogram 3.x,All correct,With small edits,0
 R8,P1,English,P1_f1e0d2,GPT Image 1,All correct,Yes,1
 R8,P1,English,P1_0fdef6,Gemini 2.5 Flash Image,Small mistake,With small edits,0
-R8,P3,Telugu,P3_31aea3,Ideogram 3.0,Wrong / made-up letters,No,0
+R8,P3,Telugu,P3_31aea3,Ideogram 3.x,Wrong / made-up letters,No,0
 R8,P3,Telugu,P3_557b2b,GPT Image 1,Wrong / made-up letters,No,0
 R8,P3,Telugu,P3_bd1dac,Gemini 3.1 Flash Image,All correct,Yes,1
 R8,P3,Telugu,P3_6e606e,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
 R8,P8,Telugu,P8_69736a,Gemini 2.5 Flash Image,Wrong / made-up letters,No,0
-R8,P8,Telugu,P8_73cba7,Ideogram 3.0,Wrong / made-up letters,No,0
+R8,P8,Telugu,P8_73cba7,Ideogram 3.x,Wrong / made-up letters,No,0
 R8,P8,Telugu,P8_01775f,GPT Image 1,Wrong / made-up letters,No,0
 R8,P8,Telugu,P8_d11ee5,Gemini 3.1 Flash Image,All correct,With small edits,1

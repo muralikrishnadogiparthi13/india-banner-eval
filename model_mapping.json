@@ -6,7 +6,7 @@
  },
  "P1_db1dee": {
   "prompt": "P1",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P1_0fdef6": {
@@ -26,7 +26,7 @@
  },
  "P2_276b88": {
   "prompt": "P2",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P2_6acb9b": {
@@ -46,7 +46,7 @@
  },
  "P3_31aea3": {
   "prompt": "P3",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P3_6e606e": {
@@ -66,7 +66,7 @@
  },
  "P4_872188": {
   "prompt": "P4",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P4_a33fb1": {
@@ -86,7 +86,7 @@
  },
  "P5_0282ac": {
   "prompt": "P5",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P5_0090c5": {
@@ -106,7 +106,7 @@
  },
  "P6_58c9b8": {
   "prompt": "P6",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P6_9dd078": {
@@ -126,7 +126,7 @@
  },
  "P7_fba49e": {
   "prompt": "P7",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P7_49bd27": {
@@ -146,7 +146,7 @@
  },
  "P8_73cba7": {
   "prompt": "P8",
-  "model": "Ideogram 3.0",
+  "model": "Ideogram 3.x",
   "arena_or_app_id": "ideogram-v3-quality"
  },
  "P8_69736a": {
