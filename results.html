@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Results | Would a shopkeeper post this?</title>
+<style>
+  :root { --ink:#1d1b18; --muted:#6b665e; --line:#e4dfd6; --bg:#faf7f2; --card:#fff; --accent:#b4441f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI","Noto Sans","Noto Sans Devanagari","Noto Sans Telugu","Noto Sans Tamil","Noto Sans Bengali",sans-serif; }
+  main { max-width:1040px; margin:0 auto; padding:24px 16px 60px; }
+  h1 { font-size:1.6rem; margin:0 0 4px; } h2 { font-size:1.15rem; margin:0 0 10px; }
+  .muted { color:var(--muted); font-size:.9rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:16px 0; }
+  .scroll { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; min-width:560px; }
+  th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+  th { font-size:.8rem; text-transform:uppercase; letter-spacing:.03em; color:var(--muted); }
+  td.num { font-variant-numeric:tabular-nums; }
+  .bar { height:8px; background:var(--line); border-radius:4px; width:140px; display:inline-block; vertical-align:middle; margin-right:8px; }
+  .bar > i { display:block; height:100%; background:var(--accent); border-radius:4px; }
+  .heat td.c { text-align:center; font-weight:600; border-radius:6px; }
+  .tabs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+  .tabs button { border:1px solid var(--line); background:#fff; border-radius:999px; padding:6px 12px; font:inherit; cursor:pointer; }
+  .tabs button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  .want { background:#fff8ef; border:1px dashed #e2c9a8; border-radius:10px; padding:8px 12px; margin-bottom:12px; }
+  .gal { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+  @media (max-width:760px) { .gal { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  .gal figure { margin:0; border:1px solid var(--line); border-radius:10px; padding:6px; background:#fff; }
+  .gal img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px; display:block; }
+  .gal figcaption { font-size:.8rem; margin-top:4px; }
+  .chip { display:inline-block; font-size:.72rem; padding:1px 7px; border-radius:999px; margin:2px 2px 0 0; background:#eee; }
+  .ok { background:#dcefdc; } .sm { background:#f6e7c4; } .bad { background:#f3d3cf; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Would a shopkeeper post this?</h1>
+  <p class="muted">Festive sale banners for small Indian shops, with the offer written in the shop's language. 8 briefs, 4 models, blind ratings by native readers. <a href="./">Rating app</a> · <a href="ratings_anonymised.csv">Raw ratings</a> · <a href="prompts.json">Prompts</a></p>
+
+  <div class="card">
+    <h2>Leaderboard</h2>
+    <p class="muted" id="lbnote"></p>
+    <div class="scroll"><table id="lb"></table></div>
+  </div>
+
+  <div class="card">
+    <h2>Text fully correct, by language</h2>
+    <p class="muted">Share of ratings where a native reader said every word on the banner was right. n = number of ratings in the cell.</p>
+    <div class="scroll"><table class="heat" id="heat"></table></div>
+  </div>
+
+  <div class="card">
+    <h2>Same banner, three scripts</h2>
+    <p class="muted">P1, P2 and P3 are the same saree-shop brief. Only the language changes. Text fully correct:</p>
+    <div class="scroll"><table id="ctrl"></table></div>
+  </div>
+
+  <div class="card">
+    <h2>Every banner, with what raters said</h2>
+    <div class="tabs" id="tabs"></div>
+    <div class="want" id="want"></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</main>
+<script>
+const MODELS = ['Gemini 3.1 Flash Image', 'GPT Image 1', 'Ideogram 3.0', 'Gemini 2.5 Flash Image'];
+const LANGS = ['English', 'Hindi', 'Telugu', 'Tamil', 'Bengali'];
+const pct = (a, b) => b ? Math.round(100 * a / b) : null;
+function parse(t) { const [h, ...rows] = t.trim().split('\n'); const k = h.split(','); return rows.map(r => Object.fromEntries(r.split(',').map((v, i) => [k[i], v]))); }
+Promise.all([fetch('ratings_anonymised.csv').then(r => r.text()), fetch('briefs.json').then(r => r.json()), fetch('model_mapping.json').then(r => r.json())]).then(([csv, briefs, map]) => {
+  const R = parse(csv);
+  const raters = new Set(R.map(x => x.rater)).size;
+  const ok = x => x.text_correct === 'All correct', ready = x => ok(x) && x.post_as_is === 'Yes';
+  $('lbnote').textContent = `${raters} raters, ${R.length} banner ratings. Ranked by post-ready rate on Indian-language banners: text fully correct AND the rater would post it as-is.`;
+  const rows = MODELS.map(m => {
+    const all = R.filter(x => x.model === m), ind = all.filter(x => x.language !== 'English');
+    return { m, ind: pct(ind.filter(ready).length, ind.length), all: pct(all.filter(ready).length, all.length), txt: pct(ind.filter(ok).length, ind.length), pick: all.filter(x => x.picked === '1').length, briefs: new Set(all.map(x => x.brief + x.rater)).size };
+  }).sort((a, b) => b.ind - a.ind || b.all - a.all);
+  $('lb').innerHTML = '<tr><th>#</th><th>Model</th><th>Post-ready, Indian languages</th><th>Post-ready, all</th><th>Text correct, Indian</th><th>Picked</th></tr>' +
+    rows.map((r, i) => `<tr><td>${i + 1}</td><td><b>${r.m}</b></td><td class="num"><span class="bar"><i style="width:${r.ind}%"></i></span>${r.ind}%</td><td class="num">${r.all}%</td><td class="num">${r.txt}%</td><td class="num">${r.pick} of ${r.briefs}</td></tr>`).join('');
+  const col = v => v === null ? '#f4f1ec' : `hsl(${Math.round(v * 1.2)},55%,${88 - v * .18}%)`;
+  $('heat').innerHTML = '<tr><th>Model</th>' + LANGS.map(l => `<th>${l}</th>`).join('') + '</tr>' + MODELS.map(m => '<tr><td><b>' + m + '</b></td>' + LANGS.map(l => {
+    const c = R.filter(x => x.model === m && x.language === l), v = pct(c.filter(ok).length, c.length);
+    return `<td class="c" style="background:${col(v)}">${v === null ? '' : v + '%'}<div class="muted" style="font-weight:400">n=${c.length}</div></td>`;
+  }).join('') + '</tr>').join('');
+  $('ctrl').innerHTML = '<tr><th>Model</th><th>P1 English</th><th>P2 Hindi</th><th>P3 Telugu</th></tr>' + MODELS.map(m => '<tr><td><b>' + m + '</b></td>' + ['P1', 'P2', 'P3'].map(p => {
+    const c = R.filter(x => x.model === m && x.brief === p); return `<td class="num">${c.filter(ok).length} of ${c.length}</td>`;
+  }).join('') + '</tr>').join('');
+  const tag = v => ({ 'All correct': 'ok', 'Small mistake': 'sm', 'Wrong / made-up letters': 'bad', 'Yes': 'ok', 'With small edits': 'sm', 'No': 'bad' }[v]);
+  function show(id) {
+    document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.id === id));
+    const b = briefs.find(x => x.id === id);
+    $('want').innerHTML = `<b>${b.id} · ${b.shop}, ${b.occasion}, ${b.lang}</b><br>Should say: ${b.lines.join(' · ')}`;
+    $('gal').innerHTML = MODELS.map(m => {
+      const code = Object.keys(map).find(k => map[k].prompt === id && map[k].model === m);
+      const rs = R.filter(x => x.banner_code === code);
+      return `<figure><img src="img/${code}.jpg" alt="${m} banner for ${id}" loading="lazy"><figcaption><b>${m}</b><br>` +
+        rs.map(x => `<span class="chip ${tag(x.text_correct)}">${x.text_correct}</span>`).join('') + '<br>' +
+        rs.map(x => `<span class="chip ${tag(x.post_as_is)}">Post: ${x.post_as_is}</span>`).join('') +
+        `<br><span class="muted">Picked by ${rs.filter(x => x.picked === '1').length} of ${rs.length}</span></figcaption></figure>`;
+    }).join('');
+  }
+  $('tabs').innerHTML = briefs.map(b => `<button data-id="${b.id}">${b.id} ${b.lang}</button>`).join('');
+  document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => show(b.dataset.id));
+  show('P3');
+});
+function $(id) { return document.getElementById(id); }
+</script>
+</body>
+</html>
